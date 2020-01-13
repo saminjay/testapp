@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">testapp</string>
+    <string name="submit">SUBMIT</string>
+    <string name="take_photo">TAKE PHOTO</string>
+    <string name="hint_number">Your Phone Number</string>
+    <string name="type_otp">Write OTP here</string>
+    <string name="camera_button">Camera Button</string>
+    <string name="hint_otp">Write OTP here</string>
+    <string name="generate_otp">GENERATE OTP</string>
+    <string name="submit_otp">SUBMIT OTP</string>
+    <string name="captured_image">Captured Image</string>
+</resources>

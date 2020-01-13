@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/captured_image"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextureView
+            android:id="@+id/texture_view"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_margin="8dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/click_photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/camera_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/texture_view"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="@string/hint_number"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/submit_phone_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/click_photo_button" />
+
+        <Button
+            android:id="@+id/submit_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/generate_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/click_photo_button" />
+
+        <TextView
+            android:id="@+id/timeout_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/submit_phone_number"
+            tools:text="30" />
+
+        <EditText
+            android:id="@+id/otp_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="@string/hint_otp"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/submit_otp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeout_text_view" />
+
+        <Button
+            android:id="@+id/submit_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/submit_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeout_text_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
